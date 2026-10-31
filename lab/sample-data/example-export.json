@@ -1,0 +1,21 @@
+{
+  "format": "kahagayo",
+  "version": 1,
+  "exportedAt": "2026-11-01T13:00:00.000Z",
+  "currency": "THB",
+  "budget": 9000,
+  "_note": "EXAMPLE DATA for tests and demos, not real spending.",
+  "accounts": [
+    { "id": "cash", "name": "Cash", "code": "CSH" },
+    { "id": "truemoney", "name": "TrueMoney", "code": "TMN" },
+    { "id": "bank", "name": "Bank", "code": "BNK" }
+  ],
+  "transactions": [
+    { "id": "ex1", "date": "2026-11-01", "time": "08:10", "type": "expense", "amount": 45.5, "currency": "THB", "category": "food", "account": "truemoney", "toAccount": null, "note": "coffee", "merchant": null, "source": "chat", "raw": "coffee 45.50 tm", "createdAt": "2026-11-01T01:10:00.000Z" },
+    { "id": "ex2", "date": "2026-11-01", "time": "12:20", "type": "expense", "amount": 85, "currency": "THB", "category": "food", "account": "cash", "toAccount": null, "note": "lunch", "merchant": null, "source": "chat", "raw": "lunch 85", "createdAt": "2026-11-01T05:20:00.000Z" },
+    { "id": "ex3", "date": "2026-11-01", "time": "13:05", "type": "expense", "amount": 120, "currency": "THB", "category": "transport", "account": "truemoney", "toAccount": null, "note": "grab", "merchant": null, "source": "chat", "raw": "grab 120 tm", "createdAt": "2026-11-01T06:05:00.000Z" },
+    { "id": "ex4", "date": "2026-11-01", "time": "18:40", "type": "transfer", "amount": 500, "currency": "THB", "category": null, "account": "bank", "toAccount": "truemoney", "note": "Top up TrueMoney", "merchant": null, "source": "chat", "raw": "top up tm 500 from kbank", "createdAt": "2026-11-01T11:40:00.000Z" },
+    { "id": "ex5", "date": "2026-11-01", "time": "19:15", "type": "expense", "amount": 389, "currency": "THB", "category": "groceries", "account": "bank", "toAccount": null, "note": "7-Eleven: milk, eggs, bread", "merchant": "7-Eleven", "source": "receipt", "raw": "receipt: 7-Eleven", "createdAt": "2026-11-01T12:15:00.000Z" },
+    { "id": "ex6", "date": "2026-11-01", "time": "20:00", "type": "income", "amount": 15000, "currency": "THB", "category": "pay", "account": "bank", "toAccount": null, "note": "allowance", "merchant": null, "source": "chat", "raw": "+15000 allowance", "createdAt": "2026-11-01T13:00:00.000Z" }
+  ]
+}

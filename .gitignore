@@ -1,0 +1,40 @@
+# --- Your real money data never goes to GitHub ---
+private/
+*.export.json
+.env
+*.db
+*.sqlite
+lab/data/
+
+# --- Android / Gradle ---
+.gradle/
+build/
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.jks
+*.keystore
+google-services.json
+
+# --- IDEs ---
+.idea/
+*.iml
+.vscode/
+.claude/settings.local.json
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# --- Node ---
+node_modules/
+
+# --- OS ---
+Thumbs.db
+desktop.ini
+.DS_Store

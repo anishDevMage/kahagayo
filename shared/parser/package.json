@@ -1,0 +1,9 @@
+{
+  "name": "kahagayo-parser",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Reference chat-line parser for Kahagayo. The Android app ports this logic to Kotlin.",
+  "main": "parser.js",
+  "scripts": { "test": "node test.js" },
+  "license": "UNLICENSED"
+}

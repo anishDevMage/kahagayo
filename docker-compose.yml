@@ -1,0 +1,34 @@
+# Kahagayo services for your laptop.
+#   docker compose up --build lab          start the lab API on http://localhost:8000
+#   docker compose --profile test run --rm test-lab
+#   docker compose --profile test run --rm test-parser
+# The Android app is NOT built here; Android Studio builds it.
+
+services:
+  lab:
+    build: ./lab
+    image: kahagayo-lab:dev
+    ports:
+      - "8000:8000"
+    environment:
+      KAHAGAYO_DB: /data/kahagayo.db
+    volumes:
+      - lab-data:/data
+    restart: unless-stopped
+
+  test-lab:
+    profiles: ["test"]
+    build: ./lab
+    image: kahagayo-lab:dev
+    command: ["python", "-m", "unittest", "discover", "-s", "tests", "-v"]
+
+  test-parser:
+    profiles: ["test"]
+    image: node:22-alpine
+    working_dir: /parser
+    volumes:
+      - ./shared/parser:/parser:ro
+    command: ["node", "test.js"]
+
+volumes:
+  lab-data:
